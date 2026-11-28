@@ -65,6 +65,17 @@
     .project-card .button-row { margin-top:18px; }
     .project-card .button { font-size:.82rem; padding:10px 14px; }
     .note { font-size:.8rem; color:#75828a; margin-top:16px !important; }
+    /* Data Detectives: one unified project card with clearly grouped tools and resources. */
+    .datadetectives-card { grid-column:1 / -1; }
+    .project-tools { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; width:100%; margin-top:18px; }
+    .project-tool-panel { min-width:0; padding:20px; border:1px solid var(--line); border-radius:16px; background:#f7f9f7; }
+    .project-tool-panel h4 { color:var(--navy); font-size:1rem; line-height:1.35; margin:8px 0 9px; }
+    .project-tool-panel p { font-size:.9rem; margin:0; }
+    .project-tool-panel .button-row { margin-top:15px; }
+    .project-tool-panel .button { font-size:.82rem; padding:10px 14px; }
+    .project-resources { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:17px; padding-top:16px; border-top:1px solid var(--line); }
+    .resource-label { flex:0 0 100%; color:var(--muted); font-size:.72rem; font-weight:850; letter-spacing:.11em; text-transform:uppercase; }
+    .datadetectives-card > .note { margin-top:14px !important; }
     .future-panel { background:var(--navy); color:#fff; border-radius:28px; padding:clamp(28px,5vw,52px); box-shadow:var(--shadow); }
     .future-panel h2 { color:#fff; }
     .future-panel h2 span { color:#8dd1c3; }
@@ -178,15 +189,37 @@
           <a class="button" href="https://docs.google.com/document/d/1yBPeBN9LqxNPuIzUdu7ItG1N3Ali3s17QouV3Fi1WUs/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Project document ↗</a></div>
           <p class="note">For the game link to work on your published portfolio, place <strong>legend_shot.html</strong> in the same repository folder as <strong>index.html</strong>. Check that the document’s sharing permissions allow your intended viewers to access it.</p>
         </article>
-        <article class="card project-card" id="datadetectives">
-          <div class="project-number">04 · DATA ANALYSIS</div>
-          <h3>DataDetectives — Far Too Curious CSV Analysis Lab</h3>
-          <p>A browser-based data analysis tool for exploring CSV records, checking data quality, previewing cleaning changes, calculating descriptive statistics, visualising distributions, and exporting cleaned data with an audit trail. Files are processed locally in your browser.</p>
-          <div class="button-row">
-            <a class="button primary" href="./far_too_curious_csv_lab.html" target="_blank" rel="noopener noreferrer" aria-label="Launch the DataDetectives CSV Analysis Tool">Launch DataDetectives Tool ↗</a>
-            <a class="button" href="https://drive.google.com/drive/folders/1aAu5TcZXe9kj3r7fBuEQNdfM1UW_v3uT?usp=drive_link" target="_blank" rel="noopener noreferrer">Open project files & datasets ↗</a>
+        <article class="card project-card datadetectives-card" id="datadetectives">
+          <div class="project-number">04 · DATA ANALYSIS & DIGITAL INVESTIGATION</div>
+          <h3>Data Detectives Project</h3>
+          <p>A collection of practical browser-based tools for analysing communication and data records. This project brings together CSV data exploration and cipher-based message investigation in one place, with the original project resources kept together below.</p>
+
+          <div class="project-tools" aria-label="Data Detectives project tools">
+            <section class="project-tool-panel" aria-labelledby="csv-lab-title">
+              <div class="project-number">TOOL 01 · DATA ANALYSIS</div>
+              <h4 id="csv-lab-title">Far Too Curious — CSV Analysis Lab</h4>
+              <p>A browser-based data analysis tool for exploring CSV records, checking data quality, previewing cleaning changes, calculating descriptive statistics, visualising distributions, and exporting cleaned data with an audit trail. Files are processed locally in your browser.</p>
+              <div class="button-row">
+                <a class="button primary" href="./far_too_curious_csv_lab.html" target="_blank" rel="noopener noreferrer" aria-label="Launch the Data Detectives CSV Analysis Lab">Launch CSV Analysis Lab ↗</a>
+              </div>
+            </section>
+
+            <section class="project-tool-panel" aria-labelledby="cipher-tool-title">
+              <div class="project-number">TOOL 02 · CIPHER ANALYSIS · ASSIGNMENT 3</div>
+              <h4 id="cipher-tool-title">Cipher Analysis Workbench</h4>
+              <p>A message investigation tool that encrypts and decrypts text with Vigenère, AES-256-GCM, and Rail Fence. It accepts typed text and CSV/TXT uploads, preserves CSV records and MessageIDs, reports processing status, exports results, and compares A–Z letter frequencies before and after Vigenère encryption.</p>
+              <div class="button-row">
+                <a class="button primary" href="./cipher_analysis_tool.html" target="_blank" rel="noopener noreferrer" aria-label="Launch the Data Detectives Cipher Analysis Workbench">Launch Cipher Analysis Tool ↗</a>
+              </div>
+            </section>
           </div>
-          <p class="note">To make the launch button work, keep <strong>far_too_curious_csv_lab.html</strong> in the same published folder as this portfolio’s <strong>index.html</strong>. The Google Drive link opens the datasets folder; it does not host or launch the web app.</p>
+
+          <div class="project-resources" aria-label="Data Detectives project folders">
+            <div class="resource-label">Project files & datasets</div>
+            <a class="button" href="https://drive.google.com/drive/folders/1aAu5TcZXe9kj3r7fBuEQNdfM1UW_v3uT?usp=drive_link" target="_blank" rel="noopener noreferrer">Open existing CSV datasets ↗</a>
+            <a class="button" href="https://drive.google.com/drive/folders/1RCCrNWo_wlRPQ8pbZQJ14de-2196EWXC?usp=drive_link" target="_blank" rel="noopener noreferrer">Open Assignment 3 Drive folder ↗</a>
+          </div>
+          <p class="note">Keep <strong>far_too_curious_csv_lab.html</strong> and <strong>cipher_analysis_tool.html</strong> in the same published repository folder as <strong>index.html</strong> so both launch buttons work. The Drive links open project folders and datasets; they do not host or launch the web apps. All other portfolio sections and project entries remain part of this page.</p>
         </article>
         <article class="card project-card"><div class="project-number">05 · COLLABORATION</div><h3>Teamwork & Class Discussion</h3>
           <p>Class activities that help me practise sharing ideas, listening to different perspectives, and working constructively with other students.</p></article>
